@@ -1,0 +1,17 @@
+﻿<h1>Search</h1>
+
+@using (@Html.BeginForm("Index", "OpenWeatherMapMvc",FormMethod.Post))
+{
+    <div class="row">
+        <div class="col-md-2 myClass">
+            <h4>Enter citi name:</h4>
+        </div>
+        <div class="col-md-8">
+            <input type="text" name="cities" class="form-control" />
+        </div>
+        <div class="col-md-2">
+            <input class="btn btn-success btn-block" type="submit" value="Search" />
+        </div>
+    </div>
+}
+@Html.Partial("~/Views/OpenWeatherMapMvc/Weather.cshtml")

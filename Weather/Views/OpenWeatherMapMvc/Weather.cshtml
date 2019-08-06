@@ -1,0 +1,26 @@
+﻿@model Weather.Models.ResponseWeather
+
+<table class="col-md-4 table table-striped table-hover table-bordered">
+    <tr>
+        <th>Weather Description</th>
+    </tr>
+    <tr>
+        <td>Citi: @(Model.name ?? string.Empty)</td>
+    </tr>
+    <tr>
+        <td>Country: @(Model.sys.country ?? string.Empty)</td>
+    </tr>
+    <tr>
+        <td>Wind: @(Model.wind.speed.ToString() ?? string.Empty) Km</td>
+    </tr>
+    <tr>
+        <td>Current Temperature: @(Model.main.temp.ToString()  ?? string.Empty) °C</td>
+    </tr>
+    <tr>
+        <td>Humidity: @(Model.main.humidity.ToString()  ?? string.Empty)</td>
+    </tr>
+    <tr>
+        <td>Weather: @(Model.weather[0].description  ?? string.Empty)</td>
+    </tr>
+
+</table>
